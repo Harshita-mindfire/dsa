@@ -70,9 +70,11 @@ console.log("chunked array  ---> ", arrayChunck([1, 2, 3, 4, 5, 6, 7], 3))
 
 function flattenArray(arrays) {
     // SOLUTION 1
-    // return arrays.reduce((a, b) => a.concat(b));
+    // return arrays.reduce((a, b) => a.concat(b), []);
     // SOLUTION 2
     // return [].concat.apply([], arrays);
     // SOLUTION 3
     return [].concat(...arrays);
   }
+
+  console.log("flatten array ->", flattenArray([[1, 2], [3, 4], [5, 6], [7]]))
